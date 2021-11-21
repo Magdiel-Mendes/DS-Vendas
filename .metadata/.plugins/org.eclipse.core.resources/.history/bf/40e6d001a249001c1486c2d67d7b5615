@@ -1,0 +1,21 @@
+package com.Magdiel.Tudo.repositories;
+
+import org.springframework.stereotype.Repository;
+
+import com.Magdiel.Tudo.Domain.Todo;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+@Repository
+public interface TodoRepository extends JpaRepository<Todo, Integer>{
+  @Autowired
+  private TodoRepository repository;
+  
+  public Todo findById(Integer id) {
+	  Optional<Todo> obj = repository.findById(id);
+	  return obj.orElse(null);
+  }
+}

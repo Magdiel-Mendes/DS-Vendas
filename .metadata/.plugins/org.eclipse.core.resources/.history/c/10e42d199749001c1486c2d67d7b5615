@@ -1,0 +1,5 @@
+package com.Magdiel.Tudo.repositories;
+
+public interface TodoRepository {
+
+}

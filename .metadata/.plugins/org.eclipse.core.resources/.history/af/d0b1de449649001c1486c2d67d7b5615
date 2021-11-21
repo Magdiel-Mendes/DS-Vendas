@@ -1,0 +1,25 @@
+package com.Magdiel.Tudo;
+
+import java.time.format.DateTimeFormatter;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.Magdiel.Tudo.Domain.Todo;
+
+@SpringBootApplication
+public class TudoApplication implements CommandLineRunner{
+
+	public static void main(String[] args) {
+		SpringApplication.run(TudoApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		Todo t1 = new Todo(null, "Estudar", "Estudar Spring Boot 2 e Angular 11", null, null);
+		
+	}
+
+}
